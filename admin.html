@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+            href="bootstrap-4.0.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/response.css">
+        <script src="bootstrap-4.0.0/dist/umd/jquery-3.2.1.slim.min.js"></script>
+        <script src="bootstrap-4.0.0/dist/umd/popper.min.js"></script>
+        <script src="bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <title>DA2</title>
+    </head>
+    <body onload="renderProduct()">
+        
+        <div class="wrap-main-content">
+
+            <div class="container-fluid">
+                <div class="header">
+                    <ul>
+                        <li style="color: white;"><i style="    font-size: 25px;" class="fa fa-user-o" aria-hidden="true"></i>Admin</li>
+                        <li style="margin-left: 89%;"><a href="myhonda+.html"><i style="font-size: 20px;" class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                   
+                        <button class="tablinks" onclick="openCity(event,
+                        'Tongquan')" id="defaultOpen"><i style="font-size: 18px; padding-right:10px" class="fa fa-wifi" aria-hidden="true"></i>Tổng quan</button>
+                    <button class="tablinks" onclick="openCity(event,
+                        'Sanpham')"><i style="font-size: 18px; padding-right:10px" class="fa fa-product-hunt" aria-hidden="true"></i>Sản phẩm</button>
+                    <button class="tablinks" onclick="openCity(event,
+                        'Nhanvien')"><i style="font-size: 18px; padding-right:10px" class="fa fa-address-book-o" aria-hidden="true"></i>Nhân viên</button>
+                    <button class="tablinks" onclick="openCity(event,
+                        'Khachhang')"><i style="font-size: 18px; padding-right:10px" class="fa fa-male" aria-hidden="true"></i>Khách hàng</button>
+                    <button class="tablinks" onclick="openCity(event,
+                        'Nhacungcap')"><i style="font-size: 18px; padding-right:10px" class="fa fa-suitcase" aria-hidden="true"></i>Nhà cung cấp</button>
+                    <button class="tablinks" onclick="openCity(event,
+                        'Hoadonnhap')"><i style="font-size: 18px; padding-right:10px" class="fa fa-book" aria-hidden="true"></i>Hóa đơn nhập</button>
+                    <button class="tablinks" style="border-bottom: none;"
+                        onclick="openCity(event,
+                        'Hoadonxuat')"><i style="font-size: 18px; padding-right:10px" class="fa fa-file-text" aria-hidden="true"></i>Hóa đơn xuất</button>
+                   
+
+
+                </div>
+
+
+                <div id="Tongquan" class="tabcontent">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-12 col-12">
+                            <div class="overview" style="background-color:
+                                green;">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h4>Tiền bán hàng:0</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-12 col-12">
+                            <div class="overview" style="background-color:
+                                orange;">
+
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h4>Số đơn hàng:0</h4>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-12 col-12">
+                            <div class="overview" style="background-color:
+                                rgb(43, 205, 226);">
+
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h4>Đơn hàng trả lại:0</h4>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-xl-4 col-md-12 col-12">
+                            <div class="overviews" style="border-color: green;">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4> Hoạt động</h4>
+                                        <hr style="border-color: green;">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h5>Tiền bán hàng :0</h5>
+                                        <h5>Số đơn hàng :0</h5>
+                                        <h5>Số sản phẩm :0</h5>
+                                        <h5>Đơn hàng trả lại :0</h5>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-12 col-12">
+                            <div class="overviews" style="border-color:
+                                orange;">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4> Thông tin kho</h4>
+                                        <hr style="border-color: orange;">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h5>Hàng tồn kho :0</h5>
+                                        <h5>Hết hàng :0</h5>
+                                        <h5>Sắp hết hàng :0</h5>
+                                        <h5>Hàng vượt chỉ tiêu:0</h5>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-xl-4 col-md-12 col-12">
+                            <div class="overviews" style="border-color: rgb(43,
+                                205, 226);">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4> Thông tin sản phẩm</h4>
+                                        <hr style="border-color: rgb(43, 205,
+                                            226);">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h5>Sản phẩm :0</h5>
+                                        <h5>Chưa làm giá bán :0</h5>
+                                        <h5>Chưa làm giá mua :0</h5>
+                                        <h5>Hàng chưa phân loại :0</h5>
+                                    </div>
+
+                                </div>
+                               
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Sanpham" class="tabcontent">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-12">
+                            <div class="row">
+                                <div class="col-xl-4 col-md-4 col-12">
+                                    <div class="form">
+                                        <h3>Nhập thông tin sản phẩm</h3>
+                                        <div class="form-group">
+                                            <h4 for="ma">Mã sản phẩm:</h4>
+                                            <input id="ma" type="text" class="form-control"
+                                                placeholder="Nhập mã sản phẩm" name="ma">
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4 for="ten">Tên sản phẩm:</h4>
+                                            <input id="ten" type="text" class="form-control"
+                                                placeholder="Nhập tên sản phẩm" name="ten">
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4 for="nhacungcap">Nhà cung cấp:</h4>
+                                            <input id="nhacungcap" type="text"
+                                                class="form-control"
+                                                placeholder="Nhập tên nhà cung cấp"
+                                                name="nhacungcap">
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4 for="sl">Số lượng:</h4>
+                                            <input id="sl" type="text" class="form-control"
+                                                placeholder="Nhập số lượng" name="sl">
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4 for="gia">Giá bán:</h4>
+                                            <input type="text" class="form-control" id="gia"
+                                                placeholder="Nhập giá bán" name="gia">
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="form-group">
+                                           
+                                            <input id="index" type="hidden">
+                                            
+                                        </div>
+                
+                                        <button onclick="addnew()" id="btn-addnew">Nhập mới</button>
+                                        <button onclick="changeProduct()" style="display: none;" id="btn-update">Cập nhật</button>
+                                        
+                                        <div style="margin-bottom: 10px;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-md-8 col-12">
+                                    <h3>Danh sách sản phẩm</h3>
+                                    <table border="1" cellpadding="0" cellpadding="10" id="tablecontent">
+            
+                                        <tr>
+            
+                                            <th>Mã sản phẩm</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Nhà cung cấp</th>
+                                            <th>Số lượng</th>
+                                            <th>Giá bán</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </table>
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <br>
+                       
+                        <div style="margin-bottom: 10px;"></div> -->
+                    
+                </div>
+
+                <script>
+
+                    function resetInput(){
+                        document.getElementById("ma").value=""
+                        document.getElementById("ten").value=""
+                        document.getElementById("nhacungcap").value=""
+                        document.getElementById("sl").value=""
+                        document.getElementById("gia").value=""
+                    }
+
+                    function validateInput(){
+                        let formElement=document.querySelector(".form")
+                        let  inputElement=formElement.querySelectorAll(".form-control")
+                        for (let i=0;i< inputElement.length;i++){
+                            if(inputElement[i].value===""){
+                                inputElement[i].parentElement.querySelector(".error-message").innerText= ' Xin mời điền đầy đủ thông tin'
+
+                            }else{
+                                inputElement[i].parentElement.querySelector(".error-message").innerText=""
+                            }
+                        }
+                    }
+                    function addnew(){
+                        validateInput()
+                        let formElement=document.querySelector(".form")
+                        let errorElement=formElement.querySelectorAll(".error-message")
+                       let arrErrorElement=[]
+                       for(let i=0;i<errorElement.length;i++){
+                        arrErrorElement.push(errorElement[i].innerText)
+                       }
+                       let checkErrorElement=arrErrorElement.every(value=> value==="")
+                       if(checkErrorElement){
+                            let ma=document.getElementById("ma").value
+                            let ten=document.getElementById("ten").value
+                            let nhacungcap=document.getElementById("nhacungcap").value
+                            let sl=document.getElementById("sl").value
+                            let gia=document.getElementById("gia").value
+                            let listProduct=localStorage.getItem("listProduct")? JSON.parse(localStorage.getItem("listProduct")):[]
+                            listProduct.push({
+                                ma:ma,
+                                ten:ten,
+                                nhacungcap:nhacungcap,
+                                sl:sl,
+                                gia:gia
+                            })
+                            localStorage.setItem("listProduct", JSON.stringify(listProduct))
+                            renderProduct()
+                            resetInput()
+                       }
+                    }
+                    function renderProduct(){
+                        let listProduct=localStorage.getItem("listProduct")? JSON.parse(localStorage.getItem("listProduct")):[]
+                        let Product=    `<tr>
+
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Nhà cung cấp</th>
+                        <th>Số lượng</th>
+                        <th>Giá bán</th>
+                        <th>Thao tác</th>
+                        </tr>
+                        `
+                        listProduct.map((value,index)=>{
+                            Product +=  `<tr>
+
+                        <td>${index+1}</td>
+                        <td>${value.ten}</td>
+                        <td>${value.nhacungcap}</td>
+                        <td>${value.sl}</td>
+                        <td>${value.gia}</td>
+                        <td>
+                            <button onclick="deleteProduct(${index})" style="    line-height: 30px; border: none;    background: white;     font-size: 20px; ">  <i  class="fa fa-trash-o" aria-hidden="true"></i></button>   
+                            <button onclick="editProduct(${index})"style="border: none; line-height: 30px;    background: white;    font-size: 20px; ">  <i  class="fa fa-cogs" aria-hidden="true"></i></button> 
+                        </td>
+                        </tr>
+                        `
+                        })
+                        document.getElementById("tablecontent").innerHTML=Product
+                    }
+                    function editProduct(index){
+                        let listProduct=localStorage.getItem("listProduct")? JSON.parse(localStorage.getItem("listProduct")):[]
+                        document.getElementById("ma").value=listProduct[index].ma
+                        document.getElementById("ten").value=listProduct[index].ten
+                        document.getElementById("nhacungcap").value=listProduct[index].nhacungcap
+                        document.getElementById("sl").value=listProduct[index].sl
+                        document.getElementById("gia").value=listProduct[index].gia
+                        document.getElementById("index").value=index
+
+
+                        document.getElementById("btn-addnew").style.display="none"
+                        document.getElementById("btn-update").style.display="inline-block"
+                    }
+                    function changeProduct(){
+                        let listProduct=localStorage.getItem("listProduct")? JSON.parse(localStorage.getItem("listProduct")):[]
+                        let index=document.getElementById("index").value
+
+                        listProduct[index]={
+                            ma:document.getElementById("ma").value,
+                            ten:document.getElementById("ten").value,
+                            nhacungcap:document.getElementById("nhacungcap").value,
+                            sl:document.getElementById("sl").value,
+                            gia:document.getElementById("gia").value,
+
+                        }
+                        localStorage.setItem("listProduct",JSON.stringify(listProduct))
+                      
+                        document.getElementById("btn-addnew").style.display="inline-block"
+                        document.getElementById("btn-update").style.display="none"
+                        renderProduct()
+                        resetInput()
+                    }
+                    function deleteProduct(index){
+                        
+                        let listProduct=localStorage.getItem("listProduct")? JSON.parse(localStorage.getItem("listProduct")):[]
+                        if(confirm("Bạn có chắc chắn muốn xóa")){
+                            listProduct.splice(index,1)
+                        }
+                   
+                        localStorage.setItem("listProduct",JSON.stringify(listProduct))
+                        renderProduct()
+                    }
+                   
+                
+                           
+                </script>
+                <div id="Nhanvien" class="tabcontent">
+                   <div class="row">
+                    <div class="col-xl-4">
+                        <h3>Nhập thông tin nhân viên</h3>
+                        <form action="#">
+                            <div class="form-group">
+                                <h4 for="Employee-code">Mã nhân viên:</h4>
+                                <input type="text" class="form-control"
+                                    id="Employee-code" placeholder="Nhập mã nhân viên" name="Employee-code">
+                            </div>
+                            <div class="form-group">
+                                <h4 for="Staff-name">Tên nhân viên:</h4>
+                                <input type="text" class="form-control"
+                                    id="Staff-name" placeholder="Nhập tên nhân viên"
+                                    name="Staff-name">
+                            </div>
+                            <div class="form-group">
+                                <h4 for="address">Địa chỉ:</h4>
+                                <input type="text" class="form-control" id="address"
+                                    placeholder="Nhập địa chỉ" name="address">
+                            </div>
+                            <div class="form-group">
+                                <h4 for="Telephone">Địên thoại:</h4>
+                                <input type="tel" class="form-control"
+                                    id="Telephone" placeholder="Nhập số điện thoại"
+                                    name="Telephone">
+                            </div>
+                            <div class="form-group">
+                                <h4 for="Email">Email:</h4>
+                                <input type="text" class="form-control" id="Email"
+                                    placeholder="Nhập email" name="Email">
+                            </div>
+                            <div class="form-group">
+                                <h4 for="Pass">Mật khẩu:</h4>
+                                <input type="password" class="form-control"
+                                    id="Pass" placeholder="Nhập mật khẩu"
+                                    name="price">
+                            </div>
+    
+                            <button onclick="addnew()" id="btn-addnew">Nhập mới</button>
+                            <button onclick="changeProduct()" style="display: none;" id="btn-update">Cập nhật</button>
+                            
+                            <div style="margin-bottom: 10px;"></div>
+                        </form>
+    
+                    </div>
+                    <div class="col-xl-8">
+                        <h3>Danh sách nhân viên</h3>
+                        <table border="1"  id="tablecontent">
+
+                            <tr>
+
+                                <th>Mã nhân viên</th>
+                                <th>Tên nhân viên</th>
+                                <th>Địa chỉ</th>
+                                <th>Điện thoại</th>
+                                <th>Email</th>
+                                <th>Mật khẩu</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </table>
+                    </div>
+                   </div>
+                </div>
+
+                <div id="Khachhang" class="tabcontent">
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <h3>Nhập thông tin khách hàng</h3>
+                            <form action="#">
+                                <div class="form-group">
+                                    <h4 for="customer-code">Mã khách hàng:</h4>
+                                    <input type="text" class="form-control"
+                                        id="customer-code" placeholder="Nhập mã khách hàng" name="customer-code">
+                                </div>
+                                <div class="form-group">
+                                    <h4 for="customer-name">Tên khách hàng:</h4>
+                                    <input type="text" class="form-control"
+                                        id="customer-name" placeholder="Nhập tên khách hàng" name="customer-name">
+                                </div>
+                                <div class="form-group">
+                                    <h4 for="address">Địa chỉ:</h4>
+                                    <input type="text" class="form-control" id="address"
+                                        placeholder="Nhập địa chỉ" name="address">
+                                </div>
+                                <div class="form-group">
+                                    <h4 for="Email">Email:</h4>
+                                    <input type="text" class="form-control" id="Email"
+                                        placeholder="Nhập email" name="Email">
+                                </div>
+                                <div class="form-group">
+                                    <h4 for="Telephone">Điện thoại</h4>
+                                    <input type="tel" class="form-control"
+                                        id="Telephone" placeholder="Nhập số điện thoại"
+                                        name="Telephone">
+                                </div>
+        
+                                <div class="form-group">
+                                    <h4 for="Pass">Mật khẩu</h4>
+                                    <input type="password" class="form-control"
+                                        id="Pass" placeholder="Nhập mật khẩu"
+                                        name="Pass">
+                                </div>
+                                <button onclick="addnew()" id="btn-addnew">Nhập mới</button>
+                                <button onclick="changeProduct()" style="display: none;" id="btn-update">Cập nhật</button>
+                                
+                                <div style="margin-bottom: 10px;"></div>
+        
+                            </form>
+                        </div>
+                        <div class="col-xl-8">
+                            <h3>Danh sách khách hàng</h3>
+                            <table border="1"  id="tablecontent">
+
+                                <tr>
+
+                                    <th>Mã khách hàng</th>
+                                    <th>Tên khách hàng</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Điện thoại</th>
+                                    <th>Email</th>
+                                    <th>Mật khẩu</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </table>
+                        </div>
+                       </div>
+                   
+                </div>
+                <div id="Nhacungcap" class="tabcontent">
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <h3>Nhập thông tin nhà cung cấp</h3>
+
+                    <form action="#">
+                        <div class="form-group">
+                            <h4 for="Supplier-code">Mã nhà cung cấp:</h4>
+                            <input type="text" class="form-control"
+                                id="Supplier-code" placeholder="Nhập mã nhà cung cấp" name="Supplier-code">
+                        </div>
+                        <div class="form-group">
+                            <h4 for="Supplier-name">Tên nhà cung cấp:</h4>
+                            <input type="text" class="form-control"
+                                id="Supplier-name" placeholder="Nhập tên nhà cung cấp" name="Supplier-name">
+                        </div>
+                        <div class="form-group">
+                            <h4 for="address">Địa chỉ:</h4>
+                            <input type="text" class="form-control" id="address"
+                                placeholder="Nhập địa chỉ" name="address">
+                        </div>
+                        <div class="form-group">
+                            <h4 for="Email">Email:</h4>
+                            <input type="text" class="form-control" id="Email"
+                                placeholder="Nhập email" name="Email">
+                        </div>
+                        <div class="form-group">
+                            <h4 for="Telephone">Điện thoại</h4>
+                            <input type="tel" class="form-control"
+                                id="Telephone" placeholder="Nhập số điện thoại"
+                                name="Telephone">
+                        </div>
+
+
+                        <button onclick="addnew()" id="btn-addnew">Nhập mới</button>
+                        <button onclick="changeProduct()" style="display: none;" id="btn-update">Cập nhật</button>
+                        
+                        <div style="margin-bottom: 10px;"></div>
+                    </form>
+                        </div>
+                        <div class="col-xl-8">
+                            <h3>Danh sách nhà cung cấp</h3>
+                            <table border="1"  id="tablecontent">
+
+                                <tr>
+
+                                    <th>Mã nhà cung cấp</th>
+                                    <th>Tên nhà cung cấp</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Điện thoại</th>
+                                    <th>Email</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </table>
+                        </div>
+                       </div>
+                    
+                </div>
+
+                <div id="Hoadonnhap" class="tabcontent">
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <h3>Thông tin hóa đơn nhập</h3>
+                    <form action="#">
+                        <div class="form-group">
+                            <h4 for="import-invoice-code">Mã hóa đơn nhập:</h4>
+                            <input type="text" class="form-control"
+                                id="import-invoice-code" placeholder="Nhập mã hóa đơn" name="import-invoice-code">
+                        </div>
+                        <div class="form-group">
+                            <h4 for="Supplier-code">Mã nhà cung cấp:</h4>
+                            <input type="text" class="form-control"
+                                id="Supplier-code" placeholder="Nhập mã nhà cung cấp" name="Supplier-code">
+                        </div>
+                        <div class="form-group">
+                            <h4 for="amount">Tổng số lượng:</h4>
+                            <input type="text" class="form-control" id="amount"
+                                placeholder="Nhập số lượng" name="amount">
+                        </div>
+                        <div class="form-group">
+                            <h4 for="Total-money">Tổng tiền:</h4>
+                            <input type="text" class="form-control"
+                                id="Total-money" placeholder="Nhập tổng tiền"
+                                name="Total-money">
+                        </div>
+
+
+                        <button onclick="addnew()" id="btn-addnew">Nhập mới</button>
+                        <button onclick="changeProduct()" style="display: none;" id="btn-update">Cập nhật</button>
+                        
+                        <div style="margin-bottom: 10px;"></div>
+                    </form>
+                        </div>
+                        <div class="col-xl-8">
+                            <h3>Danh sách hóa đơn nhập</h3>
+                            <table border="1"  id="tablecontent">
+
+                                <tr>
+
+                                    <th>Mã hóa đơn nhập</th>
+                                    <th>Mã nhà cung cấp</th>
+                                    <th>Tổng số lượng nhập</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </table>
+                        </div>
+                       </div>
+                    
+
+                </div>
+                <div id="Hoadonxuat" class="tabcontent">
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <h3>Thông tin hóa đơn xuất</h3>
+
+                            <form action="#">
+                                <div class="form-group">
+                                    <h4 for="export-invoice-code">Mã hóa đơn xuất:</h4>
+                                    <input type="text" class="form-control"
+                                        id="export-invoice-code" placeholder="Nhập mã hóa đơn" name="export-invoice-code">
+                                </div>
+                                <div class="form-group">
+                                    <h4 for="customer-name">Tên khách hàng:</h4>
+                                    <input type="text" class="form-control"
+                                        id="customer-name" placeholder="Nhập tên khách hàng" name="customer-name">
+                                </div>
+                                <div class="form-group">
+                                    <h4 for="address">Địa chỉ:</h4>
+                                    <input type="text" class="form-control" id="address"
+                                        placeholder="Nhập địa chỉ" name="address">
+                                </div>
+                                <div class="form-group">
+                                    <h4 for="Email">Email:</h4>
+                                    <input type="text" class="form-control" id="Email"
+                                        placeholder="Nhập email" name="Email">
+                                </div>
+                                <div class="form-group">
+                                    <h4 for="Telephone">Điện thoại</h4>
+                                    <input type="tel" class="form-control"
+                                        id="Telephone" placeholder="Nhập số điện thoại"
+                                        name="Telephone">
+                                </div>
+                                <div class="form-group">
+                                    <h4 for="amount">Tổng số lượng:</h4>
+                                    <input type="text" class="form-control" id="amount"
+                                        placeholder="Nhập số lượng" name="amount">
+                                </div>
+                                <div class="form-group">
+                                    <h4 for="Total-money">Tổng tiền:</h4>
+                                    <input type="text" class="form-control"
+                                        id="Total-money" name="Total-money">
+                                </div>
+        
+        
+                                <button onclick="addnew()" id="btn-addnew">Nhập mới</button>
+                                                <button onclick="changeProduct()" style="display: none;" id="btn-update">Cập nhật</button>
+                                                
+                                                <div style="margin-bottom: 10px;"></div>
+                            </form>
+                        </div>
+                        <div class="col-xl-8">
+                            <h3>Danh sách hóa đơn xuất</h3>
+                            <table border="1"  id="tablecontent">
+
+                                <tr>
+
+                                    <th>Mã hóa đơn xuất</th>
+                                    <th>Tên khách hàng</th>
+                                    <th>Điạ chỉ</th>
+                                    <th>Điện thoại</th>
+                                    <th>Tổng số lượng xuất</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </table>
+                        </div>
+                       </div>
+                   
+
+                </div>
+
+                <div style="clear: both;"></div>
+
+
+                <!-- ========================== -->
+                <script>
+                function openCity(evt, cityName) {
+                  var i, tabcontent, tablinks;
+                  tabcontent = document.getElementsByClassName("tabcontent");
+                  for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                  }
+                  tablinks = document.getElementsByClassName("tablinks");
+                  for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                  }
+                  document.getElementById(cityName).style.display = "block";
+                  evt.currentTarget.className += " active";
+                }
+                
+                // Get the element with id="defaultOpen" and click on it
+                document.getElementById("defaultOpen").click();
+                </script>
+            </div>
+
+
+            <!-- <div id="contact">
+                <div class="icon">
+                    <a href="#"><img src="images/iconmail.jpg" alt="contact"></a>
+                </div>
+                <div class="icon">
+                    <a href="#"><img src="images/iconmess.jpg" alt="contact"></a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://chat.zalo.me/"><img
+                            src="images/iconzalo.jpg" alt="contact"></a>
+                </div>
+                <div class="icon">
+                    <a href="myhonda+.html">
+                        <img src="images/logout.jfif" alt="">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>  -->
+                    <!-- </a>
+                </div> -->
+
+
+            </div> -->
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <table>
+                        <tr>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+        $( document ).ready(function(){
+            // show/hide menu mobile
+            $("#menu-toggle").click(function(){
+                var display = $("#show-menu-mobile").css("display");
+                if(display=="block"){
+                    $("#show-menu-mobile").css("display","none")
+                }
+                else{
+                    $("#show-menu-mobile").css("display","block")
+                }
+            });
+        });
+         //cart
+         $(document).ready(function(){
+
+            $(".btn-addToCart").click(function(){
+                var cartAmount = Number(sessionStorage.getItem("cartAmount"));
+            if(cartAmount!=null)
+                cartAmount +=1;
+            else
+                cartAmount=1;
+                $("#cart-amount").text("GIỎ HÀNG("+cartAmount+")");
+                sessionStorage.setItem("cartAmount",cartAmount)
+
+                var id=$(this).parent().parent().find(".btn-addToCart").attr("id");
+                var pImg=$(this).parent().parent().parent().find(".p-img").attr("src");
+                var pName=$(this).parent().parent().find(".p-name").text();
+                var pPrice=$(this).parent().parent().find(".p-price").text();
+
+                var product={
+                    "id":id,
+                    "img":pImg,
+                    "name":pName,
+                    "price":pPrice
+                };
+
+                // alert(pImg+" "+pName+" "+pPrice);
+            var cart= sessionStorage.getItem("cart");
+            var cartProduct="";
+            if(cart !=null){
+                    cartProduct=cart+","+JSON.stringify(product);
+
+            }
+            else
+                    cartProduct=JSON.stringify(product);
+                sessionStorage.setItem("cart",cartProduct)
+                // alert(cartProduct);
+            });  
+            });
+                </script>
+                </body>
+            </html>
